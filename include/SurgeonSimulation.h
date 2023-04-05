@@ -13,7 +13,11 @@ enum operation
 
 void scalpel(patient& p)
 {
-
+	std::cout << "Enter coordinates of encisium:" << std::endl;
+	std::cout << "Start (x y): ";
+	std::cin >> p.enc.x >> p.enc.y;
+	std::cout << "Stop (x y): ";
+	std::cin >> p.enc.z >> p.enc.w;
 }
 
 

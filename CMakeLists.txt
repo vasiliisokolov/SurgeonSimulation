@@ -12,7 +12,7 @@ endif()
 project ("SurgeonSimulation")
 
 # Добавьте источник в исполняемый файл этого проекта.
-add_executable (SurgeonSimulation "SurgeonSimulation.cpp" "SurgeonSimulation.h" "Patient.h")
+add_executable (SurgeonSimulation "src/SurgeonSimulation.cpp" "include/SurgeonSimulation.h" "include/Patient.h")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET SurgeonSimulation PROPERTY CXX_STANDARD 20)
