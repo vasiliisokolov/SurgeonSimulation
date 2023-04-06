@@ -10,7 +10,6 @@ struct encisiumSize
 
 struct patient
 {
-	operation op = no;
-
 	encisiumSize enc;
+
 };
