@@ -12,7 +12,7 @@ endif()
 project ("SurgeonSimulation")
 
 # Добавьте источник в исполняемый файл этого проекта.
-add_executable (SurgeonSimulation "src/SurgeonSimulation.cpp" "SurgeonSimulation.h" "include/Patient.h")
+add_executable (SurgeonSimulation "src/SurgeonSimulation.cpp" "include/SurgeonSimulation.h" "include/Patient.h")
 target_include_directories(SurgeonSimulation PUBLIC ./include)
 target_include_directories(SurgeonSimulation PUBLIC ./src)
 

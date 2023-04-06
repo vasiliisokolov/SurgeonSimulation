@@ -26,7 +26,7 @@ void hemostat (patient& p)
 	int x, y;
 	std::cout << "Enter coordinates of hemostat: " << std::endl;
 	std::cin >> x >> y;
-	std::cout >>
+	std::cout << "" << std::endl;
 }
 
 
