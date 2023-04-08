@@ -2,18 +2,18 @@
 #include <iostream>
 
 
-enum operation
+/*enum operation
 {
 	no = 0,
-	scalpel = 1 /*Скальпель*/,
-	hemostat = 2 /*Зажим*/,
-	tweezers = 3 /*Пинцет*/,
-	suture = 4 /*Игла*/
-};
+	scalpel = 1 ,
+	hemostat = 2 ,
+	tweezers = 3 ,
+	suture = 4 
+};*/
 
 void scalpel(patient& p)
 {
-	std::cout << "Enter coordinates of encisium: " << std::endl;
+	std::cout << "Enter coordinates of the encisium: " << std::endl;
 	std::cout << "Start (x y): ";
 	std::cin >> p.enc.x >> p.enc.y;
 	std::cout << "Stop (x y): ";
@@ -21,14 +21,41 @@ void scalpel(patient& p)
 	
 }
 
-void hemostat (patient& p)
+void hemostat ()
 {
 	int x, y;
-	std::cout << "Enter coordinates of hemostat: " << std::endl;
+	std::cout << "Enter coordinates of the hemostat: " << std::endl;
 	std::cin >> x >> y;
-	std::cout << "" << std::endl;
+	std::cout << "Hemostat on (" << x << " " << y << ")." << std::endl;
 }
 
+void tweezers()
+{
+	int x, y;
+	std::cout << "Enter coordinates of tweezers: " << std::endl;
+	std::cin >> x >> y;
+	std::cout << "Tweezers on (" << x << " " << y << ")." << std::endl;
+}
+
+bool suture(patient& p)
+{
+	patient su;
+	std::cout << "Enter coordinates of the seam: " << std::endl;
+	std::cout << "Start (x y): ";
+	std::cin >> su.enc.x >> su.enc.y;
+	std::cout << "Stop (x y): ";
+	std::cin >> su.enc.z >> su.enc.w;
+
+	if (su.enc.x == p.enc.x && su.enc.y == p.enc.y
+		&& su.enc.z == p.enc.z && su.enc.w == p.enc.w)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
 
 
 // TODO: установите здесь ссылки на дополнительные заголовки, требующиеся для программы.

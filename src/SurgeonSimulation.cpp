@@ -28,10 +28,26 @@ int main()
 					std::cout << "Incision made from (" << now.enc.x << " " << now.enc.y << ") to (" << now.enc.z << " " << now.enc.w << ")." << std::endl;
 					break;
 				case 2:
+					hemostat();
+					break;
+				case 3:
+					tweezers();
+					break;
+				case 4:
+					bool match = suture(now);
+					if (match)
+					{
+						std::cout << "Operation is over!" << std::endl;
+						return 0;
+					}
+					else
+					{
+						std::cerr << "Try again!" << std::endl;
+					}
 					break;
 				}
 			}
 		}
 	
-	return 0;
+	
 }
